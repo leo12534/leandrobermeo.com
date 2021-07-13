@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leandro Bermeo Portfolio</title>
+  <title>Leandro Bermeo</title>
   <!-- Normalize CSS -->
   <link rel="stylesheet" href="css/normalize.css">
   <!-- Google Fonts -->
@@ -14,40 +14,45 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Sen:wght@400;800&family=Source+Sans+Pro:wght@400;900&display=swap"
     rel="stylesheet">
+  <script src="https://kit.fontawesome.com/27bc0ed85e.js" crossorigin="anonymous"></script>
   <!-- Custom Styles -->
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
   <div class="container">
-    <header>
-      <div class="logo">
-        <h1>LB</h1>
-      </div>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="nav">
-        <ul class="unstyled__list unstyled__list--nav">
-          <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
-          <li class="nav__item"><a class="nav__link" href="#services">My Services</a></li>
-          <li class="nav__item"><a class="nav__link" href="#about">About Me</a></li>
-          <li class="nav__item"><a class="nav__link" href="#work">My Work</a></li>
-        </ul>
-      </nav>
-    </header>
-
     <main class="container__main">
       <!-- Left sidebar -->
       <aside class="container__wrapper container__wrapper--left">
-        <p>HELLLLOOO CONTAINER LEFT</p>
+        <div class="container__wrapper--left--fixed">
+          <header>
+            <div class="logo">
+              <h1>LB</h1>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+              <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+              <ul class="unstyled__list unstyled__list--nav">
+                <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+                <li class="nav__item"><a class="nav__link" href="index.html#services">My Services</a></li>
+                <li class="nav__item"><a class="nav__link" href="index.html#about">About Me</a></li>
+                <li class="nav__item"><a class="nav__link" href="index.html#work">My Work</a></li>
+              </ul>
+            </nav>
+          </header>
+
+
+        </div>
+
       </aside>
 
       <!-- Main content -->
       <article class="container__wrapper container__wrapper--right">
+
         <!-- Intro -->
         <section class="intro" id="home">
-          <h1 class="section__title section__title--intro">Hi I am <strong>Jane Smith</strong></h1>
+          <h1 class="section__title section__title--intro">Lorem, ipsum. <strong>Lorem ipsum.</strong></h1>
           <p class="section__subtitle section__subtitle--intro">Front End Developer</p>
           <img src="/img/intro-leo-img.jpg" alt="a picture of me looking cool" class="intro__img">
         </section>
@@ -87,36 +92,47 @@
               laboriosam. Magnam, saepe!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit esse facere quibusdam minima voluptatibus
               accusamus?</p>
+
           </div>
           <img src="/img/intro-leo-img.jpg" alt="a picture of me looking cool" class="about-me__img">
 
 
         </section>
-        <section class="my-work" id="#work">
-          <h2 class="section__title">My Work</h2>
-          <p class="section__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, molestias.</p>
+        <section class="my-work" id="work">
+          <h2 class="section__title  section__title-work">My Work</h2>
+          <p class="section__subtitle section__subtitle-work">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Fuga, molestias.</p>
           <div class="portfolio">
             <!-- Portfolio Item 01 -->
-            <a href="#" class="portfolio__item"><img src="" class="portfolio__img" alt=""></a>
+            <a href="portfolio-item.html" class="portfolio__item"><img src="/img/intro-leo-img.jpg"
+                class="portfolio__img" alt=""></a>
             <!-- Portfolio Item 02 -->
-            <a href="#" class="portfolio__item"><img src="" class="portfolio__img" alt=""></a>
+            <a href="#" class="portfolio__item"><img src="/img/intro-leo-img.jpg" class="portfolio__img" alt=""></a>
             <!-- Portfolio Item 03 -->
-            <a href="#" class="portfolio__item"><img src="" class="portfolio__img" alt=""></a>
+            <a href="#" class="portfolio__item"><img src="/img/intro-leo-img.jpg" class="portfolio__img" alt=""></a>
             <!-- Portfolio Item 04 -->
-            <a href="#" class="portfolio__item"><img src="" class="portfolio__img" alt=""></a>
+            <a href="#" class="portfolio__item"><img src="/img/intro-leo-img.jpg" class="portfolio__img" alt=""></a>
             <!-- Portfolio Item 05 -->
-            <a href="#" class="portfolio__item"><img src="" class="portfolio__img" alt=""></a>
+            <a href="#" class="portfolio__item"><img src="/img/intro-leo-img.jpg" class="portfolio__img" alt=""></a>
             <!-- Portfolio Item 06 -->
-            <a href="#" class="portfolio__item"><img src="" class="portfolio__img" alt=""></a>
+            <a href="#" class="portfolio__item"><img src="/img/intro-leo-img.jpg" class="portfolio__img" alt=""></a>
           </div>
         </section>
-        <footer>
+        <footer class="footer">
           <a href="#" class="footer__link">HellO@hello.com</a>
           <ul class="unstyled__list unstyled__list--social">
-            <li class="social-list__item"><a class="social-list__link" href="#">Home</a></li>
-            <li class="social-list__item"><a class="social-list__link" href="#">My Services</a></li>
-            <li class="social-list__item"><a class="social-list__link" href="#">About Me</a></li>
-            <li class="social-list__item"><a class="social-list__link" href="#">My Work</a></li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="https://codepen.io"><i class="fab fa-codepen"></i></a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="https://github.com"><i class="fab fa-github"></i></a>
+            </li>
           </ul>
         </footer>
       </article>
@@ -125,6 +141,8 @@
 
 
   </div>
+
+  <script src="./js/index.js"></script>
 
 </body>
 
