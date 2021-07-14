@@ -69,7 +69,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   /* Animated Background */
   background: linear-gradient(-45deg, var(--clr-dark), var(--clr-bg));
   background-size: 400% 400%;
@@ -141,7 +141,8 @@ a:hover {
     -0.2em -0.1em 0 var(--clr-accent-alt), 0 0 2em var(--clr-light);
 }
 .btn:hover {
-  transform: translateY(-0.2em);
+  transform: translateY(-0.5em) scale(1.05);
+
   color: var(--clr-dark);
   box-shadow: -0.3em -0.1em 0 var(--clr-accent-alt),
     0.3em 0.1em 0 var(--clr-light), 0 0 3em var(--clr-dark);
@@ -380,12 +381,13 @@ h3 {
   margin: 0 auto;
   position: relative;
 }
+
 .intro__img {
   border-radius: var(--br-circle);
   width: 125px;
   position: absolute;
-  top: 1em;
-  right: 2em;
+  top: 0.5em;
+  right: 1.5em;
   box-shadow: var(--bs);
 }
 
@@ -424,24 +426,41 @@ h3 {
 
 /* My Services Section */
 .my-services {
-  background-color: var(--clr-light);
-  background-image: url(/img/services-bg-img.jpg);
+  /* background-color: var(--clr-accent-alt);
+  background-image: url(/img/services-bg-img.jpg); */
   background-size: cover;
   background-blend-mode: multiply;
   text-align: center;
+  /*  */
+  position: relative;
+  z-index: 1;
 }
+
+.my-services::after {
+  content: "";
+  position: absolute;
+  top: 0em;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  box-shadow: 0 -10px 140px 0px var(--clr-dark), 0 10px 40px 0px var(--clr-bg),
+    0 0px 440px 0px var(--clr-dark);
+  z-index: -1;
+}
+
 .section__title--services {
-  color: var(--clr-accent);
+  color: var(--clr-accent-alt);
   position: relative;
 }
 .section__title--services:after {
   content: "";
   display: block;
   width: 3em;
-  height: 1px;
+  height: 5px;
   margin: 0.5em auto 1em;
-  background: var(--clr-light);
-  opacity: 0.25;
+  background: var(--clr-accent);
+  opacity: 1;
 }
 
 .services {
