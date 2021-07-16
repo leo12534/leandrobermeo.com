@@ -162,9 +162,11 @@ a:hover {
     -0.2em -0.1em 0 var(--clr-accent-alt), 0 0 2em var(--clr-light);
 }
 .btn:hover {
-  color: var(--clr-dark);
+  color: var(--clr-bg);
+
+  transform: translateY(-0.2em);
   text-shadow: -1px 1px 1px var(--clr-white);
-  box-shadow: -0.3em -0.1em 0 var(--clr-accent-alt),
+  box-shadow: -0.3em 0.1em 0 var(--clr-accent-alt),
     0.3em 0.1em 0 var(--clr-light), 0 0 3em var(--clr-dark);
 }
 
@@ -578,7 +580,7 @@ h3 {
 .service__content--links {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .service__link--btn {
   padding: 0.75em 1.25em;
@@ -622,19 +624,23 @@ h3 {
     width: 30em;
     z-index: -1;
     background-color: var(--clr-dark);
-    border-radius: 100% 100% 0% 100% / 100% 100% 0% 100%;
+    /* border-radius: 100% 100% 0% 100% / 100% 100% 0% 100%; */
+    /* animation: morphing 50s infinite; */
     box-shadow: 0 -10px 140px 0px var(--clr-dark), 0 10px 40px 0px var(--clr-bg),
       0 0px 440px 0px var(--clr-dark);
-    opacity: 0.65;
+    opacity: 0.45;
   }
   .service:nth-child(odd)::before {
+    border-radius: 100% 100% 0% 100% / 100% 100% 0% 100%;
     right: 0;
     top: -1.5em;
+    animation: morphing-odd 50s infinite;
   }
   .service:nth-child(even)::before {
     top: -1.5em;
-    transform: rotate(-180deg);
     background-color: var(--clr-dark-alt);
+    border-radius: 100% 100% 100% 0% / 100% 100% 100% 0%;
+    animation: morphing-even 25s infinite;
   }
 
   .service:nth-child(odd) .service__content--image {
@@ -777,5 +783,47 @@ h3 {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes morphing-odd {
+  0% {
+    border-radius: 100% 100% 0% 100% / 100% 100% 0% 100%;
+  }
+  25% {
+    border-radius: 58% 42% 75% 25%/76% 46% 54% 24%;
+    transform: translateX(100px);
+    transform: translateY(100px);
+  }
+  50% {
+    border-radius: 50% 50% 33% 67%/55% 27% 73% 45%;
+    transform: translateX(-100px);
+    transform: translateY(50px);
+  }
+  75% {
+    border-radius: 33% 67% 58% 42%/63% 68% 32% 37%;
+    transform: translateX(0px);
+    transform: translateY(0px);
+  }
+}
+
+@keyframes morphing-even {
+  0% {
+    border-radius: 100% 100% 100% 0% / 100% 100% 100% 0%;
+  }
+  25% {
+    border-radius: 58% 42% 75% 25%/76% 46% 54% 24%;
+    transform: translateX(-100px);
+    transform: translateY(-20px);
+  }
+  50% {
+    border-radius: 50% 50% 33% 67%/55% 27% 73% 45%;
+    transform: translateX(100px);
+    transform: translateY(-30px);
+  }
+  75% {
+    border-radius: 33% 67% 58% 42%/63% 68% 32% 37%;
+    transform: translateX(0px);
+    transform: translateY(0px);
   }
 }
