@@ -636,6 +636,13 @@ h3 {
     transform: rotate(-180deg);
     background-color: var(--clr-dark-alt);
   }
+
+  .service:nth-child(odd) .service__content--image {
+    transform: rotate(-1deg);
+  }
+  .service:nth-child(even) .service__content--image {
+    transform: rotate(1deg);
+  }
 }
 
 /* About Me Section */
