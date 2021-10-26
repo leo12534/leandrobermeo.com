@@ -1,0 +1,33 @@
+.maxContainerWidths {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+// MEDIA QUERY MIXIN
+/* breakpoint screen widths */
+$large: 900px;
+$medium: 768px;
+$small: 480px;
+
+@mixin mediaquery-lg {
+  @media only screen and (min-width: $large) {
+    @content;
+  }
+}
+
+@mixin mediaquery-md {
+  @media only screen and (min-width: $medium) {
+    @content;
+  }
+}
+
+@mixin mediaquery-sm {
+  @media only screen and (max-width: $small) {
+    @content;
+  }
+}

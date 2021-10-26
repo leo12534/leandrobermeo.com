@@ -1,0 +1,39 @@
+/* Buttons */
+.btn {
+  display: inline-block;
+  will-change: all;
+  background: var(--clr-primary-pink);
+  color: var(--clr-dark-blue);
+  text-shadow: 1px 1px 1px var(--clr-copy-light-blue);
+  text-decoration: none;
+  cursor: pointer;
+  padding:.55em 3.5em;
+  @include font-size(1.75);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-primary);;
+  transition: var(--transition);
+  border-radius: var(--br-rounded);
+  /*  */
+  box-shadow: 0.2em 0.1em 0 var(--clr-light-blue),
+    -0.2em -0.1em 0 var(--clr-secondary-turquoise), 0 0 2em var(--clr-light-blue);
+}
+.btn:hover {
+  color: var(--clr-background-violet);
+  transform: translateY(-0.2em);
+  text-shadow: -1px 1px 1px var(--clr-copy-light-blue);
+  box-shadow: -0.3em 0.1em 0 var(--clr-secondary-turquoise),
+    0.3em 0.1em 0 var(--clr-light-blue), 0 0 3em var(--clr-dark-blue);
+}
+
+.btn--intro {
+  margin-top: 1em;
+  width: max-content;
+  padding:.85em 3.5em;
+}
+
+.btn--portfolio {
+  @include font-size(1.5);
+  margin-top: 1.5em;
+}
