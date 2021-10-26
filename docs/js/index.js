@@ -1,12 +1,12 @@
-const navToggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelectorAll(".nav__link");
+const navToggle = document.querySelector(".header__hamburger-toggle");
+const navLinks = document.querySelectorAll(".header__nav-link");
 
 navToggle.addEventListener("click", () => {
-  document.body.classList.toggle("nav-open");
+  document.body.classList.toggle("header__nav-open");
 });
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    document.body.classList.remove("nav-open");
+    document.body.classList.remove("header__nav-open");
   });
 });

@@ -1,0 +1,39 @@
+/* Custom Properties */
+:root {
+  /* Font Families */
+  --ff-primary: "Sen", sans-serif;
+  --ff-secondary: "Source Sans Pro", sans-serif;
+  /* Font Weight */
+  --fw-normal: 400;
+  --fw-bold: 900;
+  /* Theme Palette Colors */
+  // --clr-bg: hsl(256, 97%, 13%);
+  --clr-background-violet: #360057;
+  --clr-primary-pink: hsl(342, 100%, 67%);
+  --clr-secondary-turquoise: hsl(174, 100%, 74%);
+  --clr-accent-yellow: hsla(53, 100%, 74%, 1);
+  --clr-copy-champagne:  hsla(23, 65%, 87%, 1);
+  --clr-copy-light-blue: hsl(226, 70%, 88%);
+  /* Global Colors */
+  --clr-light-blue: hsl(232, 95%, 74%);
+  --clr-dark-blue: hsl(254, 72%, 35%);
+  --clr-dark-purple: hsl(254, 43%, 45%);
+  /* Box Shadows */
+  --box-shadow: 0.2em 0.1em 0 var(--clr-light-blue), -0.2em -0.1em 0 var(--clr-secondary-turquoise),
+    0 0 2em var(--clr-light-blue);
+  /* Border Radius */
+  --br-rounded: .5em;
+  --br-circle: 50%;
+  /* Transitions */
+  --transition: all 0.35s ease;
+}
+
+
+/* Utility Classes */
+.title-xs,
+.title-sm,
+.title-lg {
+  font-family: var(--ff-reg);
+  font-weight: var(--fw-normal);
+}
+

@@ -1,0 +1,63 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+@import "./base/reset";
+@import "./base/typography";
+
+@import "./layout/navigation";
+@import "./layout/grid";
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./components/buttons";
+
+@import "./pages/index";
+
+/* General Styles */
+body {
+  background-color: var(--clr-background-violet);
+}
+
+section {
+  padding: 5em 2em;
+}
+
+
+
+
+
+
+/* About Me Section */
+.about-me__img {
+  box-shadow: var(--box-shadow);
+}
+
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas:
+      "title img"
+      "subtitle img"
+      "text img";
+    column-gap: 2em;
+  }
+  .section__title--about {
+    grid-area: title;
+  }
+  .section__subtitle--about {
+    grid-column: 1/-1;
+    grid-row: 2;
+    position: relative;
+    left: -1em;
+    width: calc(100% + 2em);
+    padding-left: 1em;
+    padding-right: calc(200px + 4em);
+  }
+  .about-me__img {
+    grid-area: img;
+    position: relative;
+    z-index: 2;
+  }
+}
+
