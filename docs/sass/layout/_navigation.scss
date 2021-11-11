@@ -1,12 +1,9 @@
 /* Header Navigation */
 .header__hamburger-toggle {
-  padding: 0.5em;
+  padding: 0.5em 0;
   background: transparent;
   border: 0;
   cursor: pointer;
-  position: absolute;
-  right: 1em;
-  top: 1em;
   z-index: 1000;
 }
 
@@ -19,7 +16,7 @@
 .header__hamburger-icon::before,
 .header__hamburger-icon::after {
   background: var(--clr-accent-yellow);
-  width: 2em;
+  width: 3em;
   height: 3px;
   border-radius: 1em;
   transition: var(--transition);
@@ -40,10 +37,14 @@
   bottom: 6px;
 }
 
-
 // ON Hamburger Click Styles - .header__nav-open class added
 .header__nav-open {
   overflow: hidden;
+}
+
+.header__nav-open .header {
+  height: 100vh;
+  transition: all 0.2s ease-in-out;
 }
 
 .header__nav-open .header__nav {
@@ -53,6 +54,7 @@
 
 .header__nav-open .header__hamburger-toggle {
   position: fixed;
+  right: 5%;
 }
 
 .header__nav-open .header__hamburger-icon {
@@ -68,9 +70,21 @@
 
 // Header Nav Styling Mobile
 
+.header__nav-wrapper {
+  display: flex;
+  // height: 15%;
+  // padding: 1em 0em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo-wrapper {
+  flex-basis: 50%;
+}
+
 .header__nav {
   position: fixed;
-  background: var(--clr-background-violet);
+  background: var(--clr-bg-violet);
   color: var(--clr-accent-yellow);
   top: 0;
   bottom: 0;
@@ -93,15 +107,13 @@
   padding: 0;
 }
 
-
 .header__nav-link {
   color: inherit;
   font-family: var(--ff-primary);
   font-weight: var(--fw-bold);
-  @include font-size(5);
+  @include font-size(5);text-shadow: 1px 2px 1px var(--clr-bg-violet);
   text-decoration: none;
 }
-
 
 // Header Nav Styling - 768px and up
 
@@ -116,22 +128,21 @@
     position: relative;
     opacity: 1;
     //
-    flex-basis:50%;
+    flex-basis: 50%;
   }
 
   .header__nav-list {
-    display:flex;
-    flex-flow:row wrap;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
   }
 
   .header__nav-link {
     color: var(--clr-accent-yellow);
     text-transform: uppercase;
-    font-weight:var(--fw-normal);
-    letter-spacing: .15em;
-    @include font-size(1.5);
+    font-weight: var(--fw-normal);
+    letter-spacing: 0.15em;
+    @include font-size(1.65);
+
   }
-
 }
-

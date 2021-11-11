@@ -1,44 +1,408 @@
+// Convert Pixels TO REM with a pixel fallback
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+// Mixins to use everywhere you need to set font size.
+
+@mixin text-xxlarge-header() {
+  @include font-size(6);
+  line-height: 1.1;
+
+  @include mediaquery-md {
+    @include font-size(7.2);
+  }
+  @include mediaquery-lg {
+    @include font-size(11);
+  }
+}
+
+@mixin text-xxlarge() {
+  @include font-size(6);
+  line-height: 1.1;
+
+  text-shadow: -3px -2px 1px var(--clr-primary-pink);
+  color: var(--clr-accent-yellow);
+  padding: 2.5rem 0;
+  text-align: center;
+
+  @include mediaquery-md {
+    @include font-size(7.2);
+  }
+  @include mediaquery-lg {
+    @include font-size(11);
+    text-shadow: 1px 1rem 1px var(--clr-primary-pink);
+
+    text-align: left;
+    padding: 8.5rem 0;
+  }
+}
+
+@mixin text-xlarge() {
+  @include font-size(4);
+  line-height: 1.1;
+
+  @include mediaquery-md {
+    @include font-size(4.8);
+  }
+
+  @include mediaquery-lg {
+    @include font-size(6.4);
+  }
+}
+
+@mixin text-large() {
+  @include font-size(3.2);
+  line-height: 1.15;
+
+  @include mediaquery-md {
+    @include font-size(4);
+  }
+
+  @include mediaquery-lg {
+    @include font-size(4.8);
+  }
+}
+
+@mixin text-mlarge() {
+  @include font-size(2.4);
+  line-height: 1.15;
+
+  @include mediaquery-md {
+    @include font-size(2.8);
+  }
+
+  @include mediaquery-lg {
+    @include font-size(3.2);
+  }
+}
+
+@mixin text-medium() {
+  @include font-size(2.1);
+  line-height: 1.5;
+
+  @include mediaquery-md {
+    @include font-size(2.2);
+  }
+
+  @include mediaquery-lg {
+    @include font-size(2.4);
+  }
+}
+
+@mixin text-body() {
+  @include font-size(1.6);
+  line-height: 1.25;
+
+  @include mediaquery-md {
+    @include font-size(1.8);
+    line-height: 1.3;
+  }
+
+  @include mediaquery-lg {
+    @include font-size(2);
+    line-height: 1.4;
+  }
+}
+
+@mixin text-small() {
+  @include font-size(1.4);
+  line-height: 1.25;
+
+  @include mediaquery-lg {
+    @include font-size(1.6);
+    line-height: 1.33;
+  }
+}
+
+@mixin text-xsmall() {
+  @include font-size(1.4);
+  line-height: 1.25;
+
+  @include mediaquery-lg {
+    @include font-size(1.4);
+    line-height: 1.33;
+  }
+}
+
 html {
   font-size: 62.5%;
 }
 
-body {
-  line-height: 1.75;
-  font-family: var(--ff-secondary);
-  @include font-size(2);
-  color: var(--clr-copy-champagne);
-  line-height: 1.3;
-}
-
-body h1,h2,h3,h4,h5,h6 {
-	font-family: var(--ff-primary);
-   line-height: 1.3;
-}
-
-h1 {
-  margin-top:0;
-  @include font-size(7.594);
-}
-h2 {
-  @include font-size(5.063);
-}
-h3 {
-  @include font-size(3.375);
-}
-h4 {
-  @include font-size(2.25);
-}
-h5 {
-  @include font-size(1.5);
-}
-
-small, .text-small {font-size: 0.667rem;}
-
 a {
   color: var(--clr-accent-yellow);
   text-decoration: none;
+  font-weight: var(--fw-bold);
 }
 
 a:hover {
   color: var(--clr-primary-pink);
+}
+
+body,
+p,
+th,
+td,
+ul,
+li {
+  font-family: var(--ff-secondary);
+  color: var(--clr-copy-champagne);
+  font-style: normal;
+  text-shadow: 1px 2px 1px var(--clr-bg-violet);
+}
+
+ul {
+  @include text-body;
+}
+
+p {
+  @include text-body;
+  // margin: 0 auto 1rem;
+  // max-width: 40rem;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+
+  .wf-inactive & {
+    font-size: 1.025em;
+    line-height: 1.125;
+    word-spacing: -0.5px;
+  }
+
+  @mixin mediaquery-sm {
+    .wf-inactive & {
+      line-height: 1.2;
+    }
+  }
+
+  @mixin mediaquery-md {
+    .wf-inactive & {
+      font-size: 1.1em;
+      letter-spacing: -0.5px;
+      line-height: 1.375;
+    }
+  }
+
+  @mixin mediaquery-lg {
+    // max-width: 42rem;
+
+    .wf-inactive & {
+      font-size: 1.05em;
+      line-height: 1.475;
+      word-spacing: 1.5px;
+    }
+  }
+
+  @mixin mediaquery-xl {
+    // max-width: 44rem;
+    .wf-inactive & {
+      font-size: 1.2em;
+      line-height: 1.5;
+      word-spacing: 1.5px;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-primary);
+  text-shadow: 1px 2px 1px var(--clr-bg-violet);
+}
+
+h1 {
+  @include text-xlarge;
+  .wf-inactive & {
+    font-family: Georgia, "New Times Roman", serif;
+    letter-spacing: -0.5px;
+  }
+
+  @mixin mediaquery-md {
+    .wf-inactive & {
+      font-family: Georgia, "New Times Roman", serif;
+      letter-spacing: normal;
+    }
+  }
+
+  @mixin mediaquery-lg {
+    // max-width: 42rem;
+
+    .wf-inactive & {
+      font-size: 3rem;
+    }
+  }
+
+  @mixin mediaquery-xl {
+    // max-width: 44rem;
+
+    .wf-inactive & {
+      font-size: 4.05em;
+    }
+  }
+}
+
+h2 {
+  @include text-large;
+  // font-weight: 300;
+  // margin: 0 auto 1rem auto;
+  // max-width: 40rem;
+
+  .wf-inactive & {
+    font-family: Georgia, "New Times Roman", serif;
+    letter-spacing: -0.75px;
+  }
+
+  @mixin mediaquery-md {
+    .wf-inactive & {
+      letter-spacing: 0.5px;
+      word-spacing: -1px;
+    }
+  }
+
+  @mixin mediaquery-lg {
+    // max-width: 42rem;
+  }
+
+  @mixin mediaquery-xl {
+    // max-width: 44rem;
+
+    .wf-inactive & {
+      letter-spacing: 0.5px;
+    }
+  }
+
+  p + & {
+    margin-top: 2rem;
+  }
+}
+
+h3 {
+  @include text-mlarge;
+  // font-weight: 400;
+  // margin: 0 auto 0.5rem auto;
+  // max-width: 40rem;
+
+  .wf-inactive & {
+    font-family: Georgia, "New Times Roman", serif;
+    letter-spacing: -0.75px;
+  }
+
+  @mixin mediaquery-md {
+    .wf-inactive & {
+      letter-spacing: 0.5px;
+      word-spacing: -1px;
+    }
+  }
+
+  @mixin mediaquery-lg {
+    // max-width: 42rem;
+
+    .wf-inactive & {
+      letter-spacing: 0.5px;
+      word-spacing: -1px;
+    }
+  }
+
+  @mixin mediaquery-xl {
+    // max-width: 44rem;
+
+    .wf-inactive & {
+      letter-spacing: 0.5px;
+      word-spacing: -1px;
+    }
+  }
+
+  p + & {
+    margin-top: 1.5rem;
+  }
+}
+
+h4 {
+  @include text-medium;
+  // font-weight: bold;
+  // margin: 0 auto 0 auto;
+  // max-width: 40rem;
+
+  .wf-inactive & {
+    font-family: Georgia, "New Times Roman", serif;
+    letter-spacing: -0.75px;
+  }
+
+  @mixin mediaquery-md {
+    .wf-inactive & {
+      letter-spacing: -1px;
+    }
+  }
+
+  @mixin mediaquery-lg {
+    // max-width: 42rem;
+  }
+
+  @mixin mediaquery-xl {
+    // max-width: 44rem;
+
+    .wf-inactive & {
+      letter-spacing: -1px;
+      word-spacing: -1px;
+    }
+  }
+
+  p + & {
+    margin-top: 1rem;
+  }
+}
+
+.headline-super {
+  @include text-xxlarge;
+  font-weight: 400;
+
+  .wf-inactive & {
+    letter-spacing: -0.75px;
+  }
+
+  @mixin mediaquery-md {
+    .wf-inactive & {
+      font-size: 3.5rem;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  @mixin mediaquery-xl {
+    .wf-inactive & {
+      letter-spacing: 1px;
+      font-size: 4.425rem;
+    }
+  }
+}
+
+.text-xsmall {
+  @include text-xsmall;
+}
+
+.text-small {
+  @include text-small;
+}
+
+.text-medium {
+  @include text-medium;
+}
+
+.text-mlarge {
+  @include text-mlarge;
+}
+
+.text-large {
+  @include text-large;
+}
+
+.text-xlarge {
+  @include text-xlarge;
+}
+
+.text-xxlarge {
+  @include text-xxlarge;
 }
