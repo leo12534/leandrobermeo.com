@@ -1,16 +1,14 @@
+/* General Styles */
+
 body {
+  background-color: var(--clr-bg-violet);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100px 1fr auto;
-  grid-gap: 1em;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
   'header'
   'main'
   'footer';
-}
-
-  .intro, .portfolio__items, .about-me {
-  @extend .maxContainerWidths
 }
 
 header {
@@ -31,7 +29,26 @@ footer {
   grid-column: 1 / span 4;
 }
 
+.wrapper {
+  @include containerWidths;
+}
 
+footer,section {
+  position: relative;
+  z-index: 1;
+  padding-bottom:5rem;
+}
+
+footer::before, footer::after ,section::before, section::after {
+  @include pseudoEls;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+}
+footer::after, section::after {
+  @include star-bg;
+}
 
 
 

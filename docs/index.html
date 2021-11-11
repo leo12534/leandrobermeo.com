@@ -9,8 +9,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Sen:wght@400;800&family=Source+Sans+Pro:wght@400;900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;800&family=Karla:wght@300;400;800&display=swap"
     rel="stylesheet">
   <script src="https://kit.fontawesome.com/27bc0ed85e.js" crossorigin="anonymous"></script>
   <!-- Custom Styles -->
@@ -20,160 +19,224 @@
 <body>
   <!-- Main content -->
   <header class="header">
-    <div class="header__logo-wrapper">
-      <h1 class="header__logo-text">LB</h1>
+    <div class="header__nav-wrapper wrapper">
+      <div class="header__logo-wrapper">
+        <h1 class="header__logo-text header__text-hover">LB</h1>
+      </div>
+      <button class="header__hamburger-toggle" aria-label="toggle navigation">
+        <span class="header__hamburger-icon"></span>
+      </button>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a class="header__nav-link header__nav-link--active" href="index.html">Home</a>
+          </li>
+          <li class="header__nav-item"><a class="header__nav-link" href="index.html#portfolio">Portfolio</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="index.html#about">About Me</a></li>
+        </ul>
+      </nav>
     </div>
-    <button class="header__hamburger-toggle" aria-label="toggle navigation">
-      <span class="header__hamburger-icon"></span>
-    </button>
-    <nav class="header__nav">
-      <ul class="header__nav-list">
-        <li class="header__nav-item"><a class="header__nav-link header__nav-link--active" href="index.html">Home</a></li>
-        <li class="header__nav-item"><a class="header__nav-link" href="index.html#portfolio">Portfolio</a></li>
-        <li class="header__nav-item"><a class="header__nav-link" href="index.html#about">About Me</a></li>
-        <li class="header__nav-item"><a class="header__nav-link" href="index.html#work">My Work</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="intro-wrapper">
-      <section class="intro" id="intro">
-        <picture class="intro__img-wrapper"><img class="intro__img" src="/img/intro-leo-img-300.jpg" alt="a picture of me looking cool"
-            ></picture>
-        <h1 class="intro__heading">Hi, my name is
-          <span class="intro__name">Leandro.</span>
-        </h1>
-        <h2 class="intro__subheading">I build things for the web. </h2>
-        <p class="intro__about">I'm a front end developer specializing in building stuff
-          and stuff and stuff. Currently, I'm focused on building accessible, stuff and stuff and stuff @ <a
-            href="">Wbresearch</a>
-        </p>
-        <a href="#work" class="btn btn--intro">Get In Touch</a>
+
+
+    <div class="header__hero-wrapper wrapper">
+      <section class="hero" id="hero">
+        <picture class="hero__img-wrapper">
+          <img class="hero__img" src="/img/intro-leo-img-300.jpg" alt="a picture of me looking cool">
+        </picture>
+        <div class="hero__content">
+          <h1 class="hero__heading">Hi, my name is</h1>
+          <h2 class="hero__name header__text-hover">Leandro.</h2>
+          <h3 class="hero__subheading">I build things for the web. </h3>
+        </div>
+        <div class="hero__about">
+          <p class="hero__about-copy">I’m a software engineer specializing in building (and occasionally designing)
+            exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at
+            <a href="">Upstatement</a>.
+
+          </p>
+        </div>
+        <div class="btn__hero-wrapper">
+          <a href="#work" class="btn btn--hero">Get In Touch</a>
+        </div>
       </section>
     </div>
+  </header>
+  <main>
+
     <!-- My Portfolio -->
     <section class="portfolio" id="portfolio">
-      <h2 class="portfolio__heading"> What I do</h2>
-      <div class="portfolio__items">
-        <div class="portfolio__item">
-          <div class="portfolio__item-about">
-            <h2 class="portfolio__item-intro">Featured Project</h2>
-            <h3 class="portfolio__item-name">Lorem ipsum dolor sit amet.</h3>
-            <p class="portfolio__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Deserunt aperiam, culpa minima pariatur
-              atque
-              facere.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt aperiam, culpa minima pariatur
-              atque
-              facere.
-            </p>
-            <ul class="portfolio__item-skills">
-              <li class="portfolio__item-skill">Next.js</li>
-              <li class="portfolio__item-skill">Chart.js</li>
-              <li class="portfolio__item-skill">GitHub API</li>
-            </ul>
-          </div>
-          <div class="portfolio__item-content">
-            <!-- <img class="portfolio__item-image" src="https://picsum.photos/580/360" alt=""> -->
-            <img class="portfolio__item-image" src="https://picsum.photos/580/360" alt="">
-            <div class="portfolio__item-btns">
-              <a class="btn btn--portfolio" href="#">Learn More</a>
-              <a class="btn btn--portfolio" href="#">View Project</a>
-            </div>
-          </div>
-        </div><!-- / service-->
-        <div class="portfolio__item">
-          <div class="portfolio__item-about">
-            <h2 class="portfolio__item-intro">Featured Project</h2>
-            <h3 class="portfolio__item-name">Lorem ipsum dolor sit amet.</h3>
-            <p class="portfolio__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Deserunt aperiam, culpa minima pariatur
-              atque
-              facere.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt aperiam, culpa minima pariatur
-              atque
-              facere.
-            </p>
-            <ul class="portfolio__item-skills">
-              <li class="portfolio__item-skill">Next.js</li>
-              <li class="portfolio__item-skill">Chart.js</li>
-              <li class="portfolio__item-skill">GitHub API</li>
-            </ul>
-          </div>
-          <div class="portfolio__item-content">
-            <img class="portfolio__item-image" src="https://picsum.photos/580/360" alt="">
-            <div class="portfolio__item-btns">
-              <a class="btn btn--portfolio" href="#">Learn More</a>
-              <a class="btn btn--portfolio" href="#">View Project</a>
-            </div>
-          </div>
-        </div><!-- / service-->
-        <div class="portfolio__item">
-          <div class="portfolio__item-about">
-            <h2 class="portfolio__item-intro">Featured Project</h2>
-            <h3 class="portfolio__item-name">Lorem ipsum dolor sit amet.</h3>
-            <p class="portfolio__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Deserunt aperiam, culpa minima pariatur
-              atque
-              facere.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt aperiam, culpa minima pariatur
-              atque
-              facere.
-            </p>
-            <ul class="portfolio__item-skills">
-              <li class="portfolio__item-skill">Next.js</li>
-              <li class="portfolio__item-skill">Chart.js</li>
-              <li class="portfolio__item-skill">GitHub API</li>
-            </ul>
-          </div>
-          <div class="portfolio__item-content">
-            <img class="portfolio__item-image" src="https://picsum.photos/580/360" alt="">
-            <div class="portfolio__item-btns">
-              <a class="btn btn--portfolio" href="#">Learn More</a>
-              <a class="btn btn--portfolio" href="#">View Project</a>
-            </div>
-          </div>
-        </div><!-- / service-->
-      </div> <!-- / services-->
-      <a href="#work" class="btn">My Work</a>
+      <div class="portfolio__wrapper wrapper">
+        <h2 class="portfolio__heading">Select Work</h2>
+        <div class="portfolio__items">
+          <div class="portfolio__item">
+            <div class="portfolio__item-about">
+              <h2 class="portfolio__item-intro">Featured Project</h2>
+              <h3 class="portfolio__item-name">Dibby Bakes</h3>
+              <p class="portfolio__item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+                dolorum veniam saepe aliquid enim reiciendis quasi incidunt eveniet officiis tempore? Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit. Voluptate, quibusdam!
+              </p>
 
+              <ul class="portfolio__item-skills">
+                <li class="portfolio__item-skill">Next.js</li>
+                <li class="portfolio__item-skill">Chart.js</li>
+                <li class="portfolio__item-skill">GitHub API</li>
+              </ul>
+              <div class="btn__portfolio-wrapper">
+                <a class="btn btn--portfolio" href="#">View Project</a>
+              </div>
+            </div>
+            <div class="portfolio__item-content">
+              <img class="portfolio__item-image" src="https://picsum.photos/580/360" alt="">
+              <img class="portfolio__item-image" src="https://picsum.photos/580/360" alt="">
+              <img class="portfolio__item-image img-hide" src="https://picsum.photos/580/360" alt="">
+              <img class="portfolio__item-image img-hide" src="https://picsum.photos/580/360" alt="">
+
+
+            </div>
+          </div><!-- / service-->
+          <div class="portfolio__item">
+            <div class="portfolio__item-about">
+              <h2 class="portfolio__item-intro"> Project</h2>
+              <h3 class="portfolio__item-name">Worldwide Business Research</h3>
+              <p class="portfolio__item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+                dolorum veniam saepe aliquid enim reiciendis quasi incidunt eveniet officiis tempore? Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit. Voluptate, quibusdam!
+              </p>
+
+              <ul class="portfolio__item-skills">
+                <li class="portfolio__item-skill">Next.js</li>
+                <li class="portfolio__item-skill">Chart.js</li>
+                <li class="portfolio__item-skill">GitHub API</li>
+              </ul>
+              <div class="btn__portfolio-wrapper">
+                <a class="btn btn--portfolio" href="#">View Project</a>
+              </div>
+            </div>
+            <div class="portfolio__item-content">
+              <img class="portfolio__item-image" src="https://picsum.photos/580/360" alt="">
+              <img class="portfolio__item-image" src="https://picsum.photos/580/360" alt="">
+              <img class="portfolio__item-image img-hide" src="https://picsum.photos/580/360" alt="">
+              <img class="portfolio__item-image img-hide" src="https://picsum.photos/580/360" alt="">
+
+
+            </div>
+          </div><!-- / service-->
+          <div class="portfolio__item">
+            <div class="portfolio__item-about">
+              <h2 class="portfolio__item-intro"> Project</h2>
+              <h3 class="portfolio__item-name">Logipharma</h3>
+              <p class="portfolio__item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+                dolorum veniam saepe aliquid enim reiciendis quasi incidunt eveniet officiis tempore? Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit. Voluptate, quibusdam!
+              </p>
+
+              <ul class="portfolio__item-skills">
+                <li class="portfolio__item-skill">Next.js</li>
+                <li class="portfolio__item-skill">Chart.js</li>
+                <li class="portfolio__item-skill">GitHub API</li>
+              </ul>
+              <div class="btn__portfolio-wrapper">
+
+                <a class="btn btn--portfolio" href="#">View Project</a>
+              </div>
+            </div>
+            <div class="portfolio__item-content">
+              <img class="portfolio__item-image" src="https://picsum.photos/580/360" alt="">
+              <img class="portfolio__item-image" src="https://picsum.photos/580/360" alt="">
+              <img class="portfolio__item-image img-hide" src="https://picsum.photos/580/360" alt="">
+              <img class="portfolio__item-image img-hide" src="https://picsum.photos/580/360" alt="">
+            </div>
+          </div><!-- / service-->
+          <div class="portfolio__item">
+            <div class="portfolio__item-about">
+              <h2 class="portfolio__item-intro"> Project</h2>
+              <h3 class="portfolio__item-name">eTail West</h3>
+              <p class="portfolio__item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+                dolorum veniam saepe aliquid enim reiciendis quasi incidunt eveniet officiis tempore? Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit. Voluptate, quibusdam!
+              </p>
+
+              <ul class="portfolio__item-skills">
+                <li class="portfolio__item-skill">Next.js</li>
+                <li class="portfolio__item-skill">Chart.js</li>
+                <li class="portfolio__item-skill">GitHub API</li>
+              </ul>
+              <div class="btn__portfolio-wrapper">
+
+                <a class="btn btn--portfolio" href="#">View Project</a>
+              </div>
+            </div>
+            <div class="portfolio__item-content">
+              <img class="portfolio__item-image" src="https://picsum.photos/580/360" alt="">
+              <img class="portfolio__item-image" src="https://picsum.photos/580/360" alt="">
+              <img class="portfolio__item-image img-hide" src="https://picsum.photos/580/360" alt="">
+              <img class="portfolio__item-image img-hide" src="https://picsum.photos/580/360" alt="">
+
+
+            </div>
+          </div><!-- / service-->
+        </div> <!-- / services-->
+      </div>
     </section>
 
     <!-- About Me -->
-    <section class="about-me" id="about">
-      <h2 class="section__title section__title--about">Who Am I</h2>
-      <p class="section__subtitle section__subtitle--about">Designer And Developer. Raised In NYC Living in London
-      </p>
-      <div class="about--me__body">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum numquam molestias voluptate repudiandae
-          quasi eum odio iusto neque inventore dolorum, obcaecati sequi cumque dignissimos animi soluta tempore
-          laboriosam. Magnam, saepe!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit esse facere quibusdam minima voluptatibus
-          accusamus?</p>
+    <section class="about" id="about">
+      <div class="about__wrapper wrapper">
+        <h2 class="about__heading ">Who Am I?</h2>
+        <div class="about__content">
+          <div class="about__img-wrapper">
+            <img class="about__img" src="./img/test-img.jpeg" alt="">
+          </div>
+          <div class="about__copy">
+            <h3 class="about__subheading">Raised In NYC Living in London
+            </h3>
+            <p class="about__description">We strive to keep winning with the best digital players on our own digital
+              playfield. We’ll create fans for your brand. We believe that brands need fans to exist. Fans that cheer,
+              cry and add value to a brand. We create digital brands in a world that’s ever changing.
+            </p>
+          </div>
+        </div>
+
       </div>
-      <img src="/img/intro-leo-img.jpg" alt="a picture of me looking cool" class="about-me__img">
 
     </section>
   </main>
 
   <footer class="footer">
-    <a href="#" class="footer__link">HellO@hello.com</a>
-    <ul class="unstyled__list unstyled__list--social">
-      <li class="social-list__item">
-        <a class="social-list__link" href="https://codepen.io"><i class="fab fa-codepen"></i></a>
-      </li>
-      <li class="social-list__item">
-        <a class="social-list__link" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a>
-      </li>
-      <li class="social-list__item">
-        <a class="social-list__link" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-      </li>
-      <li class="social-list__item">
-        <a class="social-list__link" href="https://github.com"><i class="fab fa-github"></i></a>
-      </li>
-    </ul>
+    <div class="footer__wrapper wrapper">
+      <div class="footer__heading-wrapper">
+        <h2 class="footer__heading ">Get In Touch!</h2>
+      </div>
+      <div class="footer__content">
+        <p class="footer__description">Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+        </p>
+        <div class="btn__footer-wrapper">
+          <a class="btn btn--footer" href="#">Say Hello</a>
+        </div>
+        <div class="footer__socials">
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="https://codepen.io"><i class="fab fa-codepen"></i></a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="https://github.com"><i class="fab fa-github"></i></a>
+            </li>
+          </ul>
+      </div>
 
+      </div>
+
+
+
+    </div>
   </footer>
+
 
   <script src="./js/index.js"></script>
 

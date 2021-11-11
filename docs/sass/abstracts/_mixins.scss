@@ -1,21 +1,34 @@
-.maxContainerWidths {
-  max-width: 1100px;
+@mixin containerWidths {
+  max-width: 1280px;
+  width: 90%;
   margin: 0 auto;
+  padding: 2em 0em;
 }
 
-@mixin font-size($sizeValue: 1.6) {
-  font-size: ($sizeValue * 10) + px;
-  font-size: $sizeValue + rem;
+@mixin star-bg{
+  background-image: url(../img/header-stars-pattern.png);
+  opacity: 0.5;
+}
+
+@mixin pseudoEls {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+
+
 }
 
 // MEDIA QUERY MIXIN
 /* breakpoint screen widths */
-$large: 900px;
-$medium: 768px;
-$small: 480px;
+$small: 24.15em;
+$medium: 43.75em;
+$large: 60.25em;
+$xlarge: 75em;
+$xxlarge: 100em;
 
-@mixin mediaquery-lg {
-  @media only screen and (min-width: $large) {
+@mixin mediaquery-sm {
+  @media only screen and (max-width: $small) {
     @content;
   }
 }
@@ -25,9 +38,18 @@ $small: 480px;
     @content;
   }
 }
-
-@mixin mediaquery-sm {
-  @media only screen and (max-width: $small) {
+@mixin mediaquery-lg {
+  @media only screen and (min-width: $large) {
+    @content;
+  }
+}
+@mixin mediaquery-xl {
+  @media only screen and (min-width: $xlarge) {
+    @content;
+  }
+}
+@mixin mediaquery-xxl {
+  @media only screen and (min-width: $xxlarge) {
     @content;
   }
 }

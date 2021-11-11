@@ -8,32 +8,36 @@
   text-decoration: none;
   cursor: pointer;
   padding:.55em 3.5em;
-  @include font-size(1.75);
+  @include text-small();
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-weight: var(--fw-bold);
   font-family: var(--ff-primary);;
   transition: var(--transition);
   border-radius: var(--br-rounded);
   /*  */
   box-shadow: 0.2em 0.1em 0 var(--clr-light-blue),
-    -0.2em -0.1em 0 var(--clr-secondary-turquoise), 0 0 2em var(--clr-light-blue);
+    -0.2em -0.1em 0 var(--clr-secondary-turquoise), 0 0 1.2em var(--clr-light-blue);
 }
 .btn:hover {
-  color: var(--clr-background-violet);
+  color: var(--clr-bg-violet);
   transform: translateY(-0.2em);
   text-shadow: -1px 1px 1px var(--clr-copy-light-blue);
   box-shadow: -0.3em 0.1em 0 var(--clr-secondary-turquoise),
     0.3em 0.1em 0 var(--clr-light-blue), 0 0 3em var(--clr-dark-blue);
 }
 
-.btn--intro {
-  margin-top: 1em;
+.btn--hero {
+  margin-top: 1.5em;
   width: max-content;
   padding:.85em 3.5em;
 }
 
 .btn--portfolio {
   @include font-size(1.5);
+  margin-top: 1.5em;
+}
+.btn--footer {
+  @include text-body();
   margin-top: 1.5em;
 }

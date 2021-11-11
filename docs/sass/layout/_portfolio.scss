@@ -1,0 +1,126 @@
+/* Projects Section */
+.img-hide {
+  display:none;
+}
+
+.portfolio {
+  background: rgb(53,0,87);
+background: -moz-linear-gradient(180deg, rgba(53,0,87,1) 80%, rgba(55,25,154,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(53,0,87,1) 80%, rgba(55,25,154,1) 100%);
+background: linear-gradient(180deg, rgba(53,0,87,1) 80%, rgba(55,25,154,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#350057",endColorstr="#37199a",GradientType=1);
+}
+.portfolio__heading {
+  @include text-xxlarge();
+}
+
+.portfolio__item-about {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  justify-content: center;
+  padding: 1.5em 1.5em;
+}
+
+.portfolio__item-intro {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-secondary-turquoise);
+  font-weight: var(--fw-normal);
+
+  @include text-small();
+  margin-bottom: 0.65em;
+}
+.portfolio__item-name {
+  @include text-mlarge();
+  color:var(--clr-accent-yellow);
+  margin-bottom: 0.5em;
+}
+
+.portfolio__item-description {
+  @include text-body();
+
+  line-height:1.45;
+}
+.portfolio__item-skills {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+.portfolio__item-skill {
+  margin-top: 1em;
+  color: var(--clr-accent-yellow);
+  @include text-small();
+  letter-spacing: 1px;
+}
+
+.portfolio__item-image {
+  border-radius: var(--br-rounded);
+  margin-bottom: 1em;
+  border:2px solid var(--clr-copy-champagne);
+  margin:0 auto 2em;
+}
+
+.btn__portfolio-wrapper {
+  text-align:center;
+  margin:.75rem 0;
+}
+
+.portfolio__item + .portfolio__item {
+  margin-top: 10em;
+}
+@include mediaquery-lg {
+  .img-hide {
+    display:block;
+  }
+
+  .portfolio__item {
+    display: grid;
+    gap: 3em;
+    grid-template-columns: minmax(280px, 5em) 1fr;
+
+    grid-template-areas: "portfolio-about portfolio-content ";
+  }
+
+  .portfolio__item-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1em;
+    align-self:center;
+    grid-template-areas:
+      "portfolio-img portfolio-img"
+      "portfolio-img portfolio-img";
+  }
+
+
+  .portfolio__item-image {
+    margin-bottom: 0;
+    opacity:.7;
+    transition:all .15s ease-in-out;
+    mix-blend-mode: lighten;
+  }
+
+  .portfolio__item-image:hover {
+    opacity:1;
+    transform:translateY(-10px) scale(1.025);
+    mix-blend-mode: normal;
+  }
+
+  .portfolio__item-about {
+    grid-area: portfolio-about;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .portfolio__item-content {
+    grid-area: portfolio-content;
+  }
+}
+@include mediaquery-xl {
+
+  .portfolio__item {
+    grid-template-columns: minmax(430px, 5em) 1fr;
+  }
+}
+
